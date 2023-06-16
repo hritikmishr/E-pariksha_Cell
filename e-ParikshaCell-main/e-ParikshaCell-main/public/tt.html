@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Form</title>
+    <style>
+        body{
+            background:white;
+            font-family: 'Jost', sans-serif;
+            align-items: center;
+            display: grid;
+            font-size: 14px;
+            font-weight: 400;
+            height: 100vh;
+           justify-items: start;
+          
+        }
+        h1{
+          color: #ffffff;
+        }
+        .signup-container {
+        display: grid;
+        grid-template-areas: "left right";
+        max-width: 900px;
+        }
+        
+
+        .left-container {
+       background:#050A30 ;
+       overflow: hidden;
+       padding: 40px 0 0 0;
+       position: relative;
+      text-align: center;
+       width: 300px;
+       
+        }
+        .left-container h1 {
+        color: white;
+        display: inline-block;
+        font-size: 24px;
+        }
+        .left-container img{
+            background:#00203FFF;
+            border-radius: 10%;
+            color: #FF69B4;
+            font-size: 24px;
+            margin-right: 5px;
+            padding: 10px;
+            transform: rotate;
+           
+        }
+    
+        .student {
+        bottom: -5px;
+        position: absolute;
+        text-align: center;
+    }
+    .student :before {
+            background: #FF69B4;
+            content: "";
+            height: 100%;
+            left: 0;
+            opacity: .4;
+            position: absolute;
+            width: 100%;
+            z-index: 1;
+        }
+    
+  
+        .student img {
+        filter: sepia(100%);
+        width: 70%;
+    }
+
+    .right-container {
+    background: lighten(#2F3C7E, 40%);
+    display: grid;
+    grid-template-areas: "." ".";
+    width: 600px;
+   
+    }
+   
+  
+    .right-container h1:nth-of-type(1) {
+        color: #00203FFF;
+        font-size: 29px;
+        font-weight: 600;
+    }
+  
+    .right-container set {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 0;
+    }
+    
+
+    
+  
+    .right-container input {
+      border: 1px solid #00203FFF;
+      border-radius: 4px;
+      height: 38px;
+      line-height: 38px;
+      padding-left: 5px;
+    }
+  
+    .right-container input, label {
+        color: #00203FFF;
+    }
+  
+    .right-container header {
+        padding: 70px;
+    }
+    
+
+    #display-image{
+  width: 150px;
+  height: 190px;
+  border: 1px solid black;
+  background-position: center;
+  background-size: cover;
+  float: right;
+}
+  
+    .right-container label, input  {
+      width: 176px;
+      padding: 5px;
+    }
+  
+    
+      
+      
+      .right-container button { 
+          border: none;
+          border-radius: 50%;
+          height: 38px;
+          margin-right: 10px;
+          outline: none;
+          width: 38px;
+      }
+      
+      .right-container button i {
+          color: #FF69B4;
+          font-size: 16px;
+      }
+      .student-sem .radio-container {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+  
+    
+    .right-container footer {
+      align-items: center;
+      background: #fff;
+      display: grid;
+      padding: 5px 40px;
+    }
+  
+    .right-container footer button {
+        border: 1px solid rgba(0,0,0,.2);
+        height: 38px;
+        line-height: 38px;
+        width: 100px;
+        border-radius: 19px;
+        font-family: font-family;
+      }
+      
+      .right-container footer #back {
+        background: #fff;
+        transition: .2s all ease-in-out;}
+
+        .right-container footer #back:hover {
+	 background: #171a2b;
+	 color: white;}
+   .right-container footer #next {
+	 background:#171a2b;
+	 border: 1px solid transparent;
+	 color: white;
+}
+   .right-container footer #next:hover {
+	 background: #171a2b;
+   color: white;}
+        
+       
+  
+        .footer #next {
+        background:  #fff;
+        border: 1px solid transparent;
+        color: rgb(204, 37, 37);
+        
+      }
+      .right-container footer #reset {
+        background: #fff;
+        
+        transition: .2s all ease-in-out;}
+
+        .right-container footer #reset:hover {
+	 background: #171a2b;
+	 color: white;}
+	 * {
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  text-transform: capitalize;
+  background-color: white;
+}
+
+footer {
+  background-color: #050A30;
+  margin-top: 15px;
+}
+.container {
+  margin-left: 150px;
+  margin-right: 150px;
+}
+.container .content {
+  display: flex;
+  padding: 50px;
+  justify-content: space-between;
+}
+.container .content .col {
+  display: flex;
+  flex-direction: column;
+}
+.container .content p:first-child:not(.flex p:first-child) {
+  color: white;
+  font-size: 22px;
+}
+.container .content p:not(.col, .column p:first-child) {
+  color: rgb(136, 136, 136);
+  margin-bottom: 10px;
+}
+.container .content .col:first-child {
+  gap: 25px;
+}
+.container .content .col:first-child .flex {
+  display: flex;
+  gap: 50px;
+}
+.container .content .col:first-child .flex .col-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.container .content .col:first-child .flex .col-info p {
+  font-size: 14px;
+}
+.container .content .col:first-child .flex .col-info span {
+  color: white;
+  font-size: 17px;
+}
+.container .content .col .column:first-child {
+  margin-right: 50px;
+}
+
+.container .content .col .column p:first-child {
+  margin-bottom: 25px;
+}
+.container .content .col .column p:not(p:first-child) {
+  margin-bottom: 12px;
+}
+.container .content .col:last-child {
+  gap: 15px;
+}
+.container .content .col:last-child .email {
+  display: flex;
+}
+.container .content .col:last-child .email input {
+  width: 300px;
+  height: 40px;
+  font-size: 17px;
+  color: white;
+  background-color: rgb(76, 76, 76);
+  padding-left: 10px;
+  border: 0;
+  outline: 0;
+}
+.container .content .col:last-child .email button {
+  width: 200px;
+  height: 40px;
+  color: white;
+  background-color: rgb(229, 39, 39);
+  padding-left: 10px;
+  border: 0;
+  outline: 0;
+  text-align: center;
+  margin-left: -30px;
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+}
+.container .content .col:last-child .social {
+  display: flex;
+  gap: 20px;
+}
+.container .content .col:last-child .social img {
+  width: 40px;
+}
+.content-foot {
+  background-color: rgb(43, 43, 43);
+}
+ .content-foot .foot-text{
+  padding: 25px 80px;
+  display: flex;
+  justify-content: space-between;
+}
+.content-foot .container p {
+  color: rgb(136, 136, 136);
+}
+.content-foot .container p span {
+  color: white;
+  font-weight: bold;
+}
+.content-foot .container .pay {
+  display: flex;
+  gap: 20px;
+}
+.content-foot .container .pay img {
+  width: 70px;
+  height: 40px;
+  object-fit: contain;
+  background-color: white;
+  padding: 10px 5px;
+}
+
+      .first-name label, .middle-name label, .last-name label, .father-name label, .mother-name label, .student-birthday label, .student-gender label, .student-phone label, .student-citizenship label, .student-email label, .student-address label, .student-sem label, .type-regular-kt label, .upload-payment label {
+	 display: inline-block;
+	 margin-bottom: 5px;
+	 padding : 25px 10px;
+}
+
+
+.radio-container {
+	 background: #fff;
+	 border: 1px solid rgba(0, 0, 0, .1);
+	 border-radius: 4px;
+	 display: inline-block;
+	 padding: 5px;
+}
+ .radio-container label {
+	 background: transparent;
+	 border: px solid transparent;
+	 border-radius: 2px;
+	 display: inline-block;
+	 height: 25px;
+	 line-height: 20px;
+	 margin: 0;
+	 padding: 0;
+	 text-align: center;
+	 transition: 0.2s all ease-in-out;
+	 width: 60px;
+}
+.radio-container input[type="radio"]:checked + label{
+    
+    background: white;
+    border: 2px solid #00203FFF;
+    
+}
+.radio-container input[type="radio"]:checked + label {
+    background:white;
+    border: 2px solid #00203FFF;
+    
+    
+}
+.button {
+  background-color:beige;
+  border: none;
+  color:beige;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.bug{
+    
+    width: 1100px;
+}
+    
+
+    
+
+  
+    </style>
+     <link rel = "icon" href = 
+     "img/dee1.jpeg"
+             type = "image/x-icon">
+</head>
+<body>
+    <div class="signup-container">
+      
+
+        <div class="left-container">
+          <h1>
+            <img src="img\logoe.jpeg"  width="250" height="150" >
+           
+          </h1>
+          <div class="student">
+          </div>
+        </div>
+        <div class="right-container">
+          <header>
+            <h2 style="text-align:center ;"><b>      Excelssior Education Society's </b></h2>
+            <div class="shiva">
+          <h1> <b> <img src="https://kccemsr.edu.in/images/logo.png"  width="60" height="50"  class="shiv"> <p class="bug"> K.C COLLEGE OF ENGINEERING & MANAGEMENT STUDIES & RESEARCH</p></b></h1>
+        </div>
+          <p class="lead text-center" style="margin:0px;font-size:19px;text-align:center ;"><i>(NAAC Accredited with B++ Grade)</i></p>
+             <br><hr size='3' noshade><br>
+            
+            <h2 style="text-align:center ;"><b>SEMESTER EXAM FORM </b></h2>
+            <div class="photo">
+              <h3 style="text-align:right ;"><b>Upload Photo</b></h3>
+                  <input type="file" id="image-input" accept="image/jpeg, image/png, image/jpg" style="float:right">
+   
+   <div id="display-image">
+     <script src="photo.js"></script>
+   </div>
+            <div class="set">
+              <div class="first-name">
+                <label for="first-name" ><b>First Name<span class="text-red"> *</span></b></label>
+                <input class="name" required class="input-error nameInputField" placeholder="Enter Here" type="text"></input>
+                <div class="input-error-message is-active">
+                  (First Name is required.)
+                </div>
+                
+                <div class="middle-name"></div>
+                <label for="middle-name"><b>Middle Name</b></label>
+                <input class="mid" placeholder="Enter Here" type="text"></input>
+                <div class="last-name"></div>
+                <label for="last-name"><b>Last Name</b></label>
+                <input class="last" placeholder="Enter Here" type="text"></input>
+              
+                
+
+            <div class="set">
+              <div class="father-name">
+                <label for="father-name"><b>Father's Name</b></label>
+                <input id="father-name" placeholder="Enter Here" type="text"></input>
+                <div class="mother-name"></div>
+                <label for="mother-name"><b>Mother's Name</b></label>
+                <input id="mother-name" placeholder="Enter Here" type="text"></input>
+              </div>
+              <div class="student-birthday">
+                <label for="student-birthday"><b>Date of Birth<span class="text-red"> *</span></b></label>
+                <input id="student-birthday" placeholder="DD/MM/YYYY" type="date"></input>
+                <div class="input-error-message is-active">
+                  (Date of Birth is required.)
+                </div>
+                
+                <div class="set"></div>
+                <div class="student-address"></div>
+                <label for="student-address"><b>Permanent Address</b></label>
+                <textarea rows="8" cols="23" placeholder="Enter your address"></textarea>
+                <div class="student-email"></div>
+                <label for="student-email"><b>Student's Email Id</b></label>
+                <input id="student-email" placeholder="Email Id" type="text"></input>
+                <div class="student-phone"></div>
+                <label for="student-phone" ><b>Student's Phone No.<span class="text-red"> *</span></b></label>
+                <input id="student-phone"  required class="input-error phoneInputField" placeholder="Phone No" type="number"  min="0" max="10"></input><br>
+                <div class="input-error-message is-active">
+                  (Phone No. is required.)
+                </div>
+                
+            <div class="set">
+              <div class="student-id">
+                <label for="student-id"><b>Student's ID<span class="text-red"> *</span></b></label>
+                <input id="student-id" placeholder="Enter Here" type="number"></input>
+                </div>
+                <div class="input-error-message is-active">
+                  (Student ID. is required.)
+                </div>
+            <div class="set">
+              <div class="student-gender">
+                <label for="student-gender-female"><b>Gender<span class="text-red"> *</span></b></label>
+                <div class="radio-container">
+                  <input id="student-gender-male" name="student-gender" type="radio" value="male"></input>
+                  <label for="student-gender-male">Male</label>
+                  <input id="student-gender-female" name="student-gender" type="radio" value="female"></input>
+                  <label for="student-gender-female">Female</label>
+                  <input id="student-gender-other" name="student-gender" type="radio" value="other"></input>
+                  <label for="student-gender-other">Other</label>
+                 
+              </div>
+              <div class="input-error-message is-active">
+                (Gender is required.)
+              </div>
+              <div class="student-citizenship">
+                <label for="student-citizenship-india"><b>Country of Citizenship</b></label>
+                <div class="radio-container">
+                  <input id="student-citizenship-india" name="student-citizenship" type="radio" value="India"></input>
+                  <label for="student-citizenship-india">India</label>
+                  <input id="student-citizenship-other" name="student-citizenship" type="radio" value="other"></input>
+                  <label for="student-citizenship-other">Other</label>
+                </div>
+              </div>
+             
+              <div class="type-regular-kt">
+                <label for="exam-type"><b>Exam Type<span class="text-red"> *</span></b></label>
+                <div class="radio-container">
+                  <input id="type-regular" name="regular-kt" type="radio" value="regular"></input>
+                  <label for="type-regular">Regular</label>
+                  <input id="type-kt" name="regular-kt" type="radio" value="kt"></input>
+                  <label for="type-kt">KT</label>
+                </div>
+              </div>
+            </div>
+            <div class="input-error-message is-active">
+              ( Exam Type is required.)
+            </div>
+            <form action="#">
+              <label for="branch"><b>Select Branch</b></label>
+              <select name="branch" id="branch">
+                <option value="Computer">Computer</option>
+                <option value="IT">Informaion Technology</option>
+                <option value="EXTC">EXTC</option>
+              </select>
+            
+        </form>
+            <div class="student-sem">
+              <label for="student-sem-0-25"><b>Select Semester<span class="text-red"> *</span></b></label>
+              <div class="radio-container">
+                <input id="student-sem-sem-5" name="student-sem" type="radio" value="sem-5"></input>
+                <label for="student-sem-0-25">Sem 5</label>
+                <input id="student-sem-sem-6" name="student-sem" type="radio" value="sem-6"></input>
+                <label for="student-sem-sem-6">Sem 6</label>
+                <input id="student-sem-sem-7" name="student-sem" type="radio" value="sem-7"></input>
+                <label for="student-sem-sem-7">Sem 7</label>
+                <input id="student-sem-sem-8" name="student-sem" type="radio" value="sem-8"></input>
+                <label for="student-sem-sem-8">Sem 8</label>
+              </div>
+            </div>
+            <div class="input-error-message is-active">
+              ( Semester is required.)
+            </div>
+            <label><b>Upload Documents<span class="text-red"> *</span></b></label>
+            <input type="file" id="fileId" name="fileId">
+            <div class="input-error-message is-active">
+              ( Upload Documents is required.)
+            </div><br>
+
+            <input id="button" onclick="location.href='file:///C:/Users/satya/OneDrive/Documents/MINI%20PROJECT%205/E-PARIKSHA%20CELL/paypal/paypal.html'" value="Pay Exam Fees"  class="button"/>
+          </header>
+          <footer>
+            <div class="set">
+              <button id="back">BACK</button>
+              <button id="reset">RESET</button>
+              <button onclick="window.print()">PRINT FORM</button>
+              <button id="next">NEXT</button>
+             
+              
+              
+            </div>
+          </footer>
+
+        </div>
+      </div>
+  <footer>
+  <div class="container">
+    <div class="content">
+      ⁡⁢⁣⁣ ⁡
+      <div class="col">
+        <p>contact us</p>
+        <p>
+          hi, we are always open for cooperation and suggestions, <br />
+          contact us in one of the ways below:
+        </p>
+        <div class="flex">
+          <div class="col-info">
+            <p>
+              PHONE NUMBER <br />
+              <span> +91 9594477844</span>
+            </p>
+            <p>
+              OUR LOCATION <br />
+              <span>Mithbunder Rd, near Sadguru Gardens, Kopri, Thane East, Maharashtra, India - 400603</span>
+            </p>
+          </div>
+          <div class="col-info">
+            <p>
+              EMAIL ADDRESS <br />
+              <span>info@kccemsr.edu.in</span>
+            </p>
+
+            <p>
+              WORKING HOURS <br />
+              <span>Mon-sat 10:00am - 7:00pm</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      ⁡⁢⁣⁡⁢⁣⁣ ⁡
+  
+     
+      ⁡⁢⁣⁣ ⁡
+      <div class="col">
+        <p>Inquiry</p>
+        <p>
+          enter your email address below to subscribe to our Exam Announcment<br />
+         
+        </p>
+        <div class="email">
+          <input type="email" placeholder="user@example.com" />
+          <button>Subscribe</button>
+        </div>
+        <p>follow us on social networks:</p>
+        <div class="social">
+          <img src="https://i.postimg.cc/44pPB9wk/facebook.png" alt="" />
+          <img src="https://i.postimg.cc/L8Q3nB4f/twitter.png" alt="" />
+          <img src="https://i.postimg.cc/TYG9S3Hy/instagram.png" alt="" />
+          <img src="https://i.postimg.cc/kGCxkTwr/youtube.png" alt="" />
+          <img src="https://i.postimg.cc/CKZHDBd2/telegram.png" alt="" />
+        </div>
+      </div>
+      ⁡⁢⁡⁢⁣⁣
+    </div>
+  </div>
+  <div class="content-foot">
+    <div class="container">
+      <div class="foot-text">
+        <p>powered by <span>DOSH TECHNOLOGIES</span> - Developed by <span>Satyam Maurya, Omkar chauhan, Deepak Mishra & Hritik Mishra</span></p>
+        <div class="pay">
+          <img src="https://i.pinimg.com/564x/06/60/11/066011ee532a233a5d188d2cc647dec8.jpg" alt="" />
+          <img src="https://i.pinimg.com/564x/0d/a5/56/0da556be226d5dc221d98b57efd9c1f6.jpg" alt="" />
+          <img src="https://i.postimg.cc/PrtWyFPY/visa-logo-png-2013.png" alt="" />
+          <img src="https://i.postimg.cc/R0j1TSHZ/mastercard-PNG23.png" alt="" />
+          <img src="https://i.pinimg.com/564x/e8/34/44/e834443a09ec411d4462cbe1005b0162.jpg" alt="" />
+          
+         
+          <img src="https://i.pinimg.com/564x/ae/5f/e3/ae5fe3dc423e44c0ddbef5dc64fa356b.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

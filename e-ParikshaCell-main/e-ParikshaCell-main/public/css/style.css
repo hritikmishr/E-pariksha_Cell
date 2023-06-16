@@ -1,0 +1,592 @@
+/* CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* CSS Variables */
+:root{
+    --navbar-height: 59px;
+}
+
+/* Navigation Bar */
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+
+#navbar::before{
+    content: "";
+    background-color: white;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+/* Navigation Bar: Logo and Image */
+#logo{
+    margin: 10px 34px;
+}
+
+#logo img{
+    height: 70px;
+    margin: 3px 6px;
+}
+
+
+/* Navigation Bar: List Styling */
+
+#navbar ul{
+    display: flex;
+    font-family: 'Baloo Bhai', cursive;
+}
+
+#navbar ul li{ 
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a{
+    color: rgb(12, 12, 12);
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+
+/* Home Section */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding:3px 200px;
+    height: 532px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before{ 
+    content: "";
+    position: absolute;
+    background: url('../kc7.jpeg') no-repeat center center/cover;
+    
+    height: 642px;
+    top:0px;
+    left:0px;
+    width: 100%;
+    z-index: -1;
+    opacity:0.89;
+}
+
+#home h1{
+    color:#f0f8ff ;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+
+#home p{
+    color:white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+}
+/* Services Section */
+#services{
+    margin: 34px;
+    display: flex;
+}
+#services .box{ 
+    border: 10px solid#00ffef ;
+    padding: 34px;
+    margin: 2px 55px;
+    border-radius: 28px;
+    background: #f2f2f2;
+    margin-bottom: 20px;
+}
+
+#services .box img{ 
+   height: 160px;
+   margin: auto;
+   display: block;
+}
+
+#services .box p{
+    font-family: 'Bree Serif', serif;
+
+} 
+
+/* Clients Section */
+#client-section{ 
+    position: relative;
+}
+
+#client-section::before{
+ content: "";
+ position: absolute;
+ background: url('https://userguiding.com/wp-content/uploads/2022/03/best-saas-books.jpg');
+ width: 100%;
+ height: 100%;
+ z-index: -1;
+ opacity: 0.3;
+}
+
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-item{
+    padding: 34px;
+}
+
+#clients img{
+    height: 124px;
+}
+
+
+
+/* Contact Section */
+#contact{
+    position: relative;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url('../contact.jpg') no-repeat center center/cover;
+
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact-box input, 
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+} 
+
+#contact-box form{
+    width: 40%;
+}
+
+#contact-box label{
+   font-size: 1.3rem;
+   font-family: 'Bree Serif', serif;
+
+}
+
+
+footer{
+    background: rgb(232, 230, 230);
+    color: rgb(230, 219, 219);
+    padding: 9px 20px;
+}
+
+/* Utility Classes */
+.h-primary{
+    font-family: 'Bree Serif', serif;
+    font-size: 3.8rem;
+    padding: 12px;
+    color: black;
+    
+}
+#home{
+    color: black;
+    
+    
+}
+
+.h-secondary{
+    font-family: 'Bree Serif', serif;
+    font-size: 2.3rem;
+    padding: 12px;
+}
+
+/* .btn{
+   padding: 6px 20px;
+    border: 10px solid white;
+    background-color:#00ffef;
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor:pointer;
+    width: 360px;
+    margin-left: 125px;
+    border-radius: 7px;
+} */
+
+.frame {
+  width: 90%;
+  margin: 40px auto;
+  text-align: center;
+}
+button {
+  margin: 20px;
+}
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  color:white;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+
+
+
+/* 5 */
+.btn-5 {
+  width: 170px;
+  height: 70px;
+  line-height: 42px;
+  padding: 0;
+  border:none ;
+  
+background:#050A30 ;
+}
+.btn-5:hover {
+  color: #050A30;
+  background: white;
+   box-shadow:none;
+}
+.btn-5:before,
+.btn-5:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: blue;
+  box-shadow:
+   -1px -1px 5px 0px #fff,
+   7px 7px 20px 0px #0003,
+   4px 4px 5px 0px #0002;
+  transition:400ms ease all;
+}
+.btn-5:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.btn-5:hover:before,
+.btn-5:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+
+
+
+.center{
+    text-align: center;
+}
+#logo{
+    color: black;
+}
+.mn{
+    width: 100px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 10px;
+}
+.mishra{
+
+    cursor:pointer;
+    width: 100px;
+    border-radius: 5px;
+}
+.you{
+    
+    cursor: pointer;
+}
+body {
+    font-family: 'Bree Serif', serif;
+    text-transform: capitalize;
+    background-color: white;
+  }
+  
+  footer {
+    background-color: #050A30;
+    margin-top: 15px;
+  }
+  .container {
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+  .container .content {
+    display: flex;
+    padding: 50px;
+    justify-content: space-between;
+  }
+  .container .content .col {
+    display: flex;
+    flex-direction: column;
+  }
+  .container .content p:first-child:not(.flex p:first-child) {
+    color: white;
+    font-size: 22px;
+  }
+  .container .content p:not(.col, .column p:first-child) {
+    color: rgb(136, 136, 136);
+    margin-bottom: 10px;
+  }
+  .container .content .col:first-child {
+    gap: 25px;
+  }
+  .container .content .col:first-child .flex {
+    display: flex;
+    gap: 50px;
+  }
+  .container .content .col:first-child .flex .col-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .container .content .col:first-child .flex .col-info p {
+    font-size: 14px;
+  }
+  .container .content .col:first-child .flex .col-info span {
+    color: white;
+    font-size: 17px;
+  }
+  .container .content .col .column:first-child {
+    margin-right: 50px;
+  }
+  
+  .container .content .col .column p:first-child {
+    margin-bottom: 25px;
+  }
+  .container .content .col .column p:not(p:first-child) {
+    margin-bottom: 12px;
+  }
+  .container .content .col:last-child {
+    gap: 15px;
+  }
+  .container .content .col:last-child .email {
+    display: flex;
+  }
+  .container .content .col:last-child .email input {
+    width: 300px;
+    height: 40px;
+    font-size: 17px;
+    color: white;
+    background-color: rgb(76, 76, 76);
+    padding-left: 10px;
+    border: 0;
+    outline: 0;
+  }
+  .container .content .col:last-child .email button {
+    width: 200px;
+    height: 40px;
+    color: white;
+    background-color: rgb(229, 39, 39);
+    padding-left: 10px;
+    border: 0;
+    outline: 0;
+    text-align: center;
+    margin-left: -30px;
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+  }
+  .container .content .col:last-child .social {
+    display: flex;
+    gap: 20px;
+  }
+  .container .content .col:last-child .social img {
+    width: 40px;
+  }
+  .content-foot {
+    background-color: rgb(43, 43, 43);
+  }
+   .content-foot .foot-text{
+    padding: 25px 80px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .content-foot .container p {
+    color: rgb(136, 136, 136);
+  }
+  .content-foot .container p span {
+    color: white;
+    font-weight: bold;
+  }
+  .content-foot .container .pay {
+    display: flex;
+    gap: 20px;
+  }
+  .content-foot .container .pay img {
+    width: 70px;
+    height: 40px;
+    object-fit: contain;
+    background-color: white;
+    padding: 10px 5px;
+  }
+  .carousel {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+ul.slides {
+    display: block;
+    position: relative;
+    height: 600px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style: none;
+}
+
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+ul.slides input {
+    display: none; 
+}
+
+
+.slide-container { 
+    display: block; 
+}
+
+.slide-image {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    opacity: 0;
+    transition: all .7s ease-in-out;
+}   
+
+.slide-image img {
+    width: auto;
+    min-width: 100%;
+    height: 100%;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    font-size: 100px;
+    line-height: 600px;
+    color: #fff;
+}
+
+.carousel-controls label {
+    display: none;
+    position: absolute;
+    padding: 0 20px;
+    opacity: 0;
+    transition: opacity .2s;
+    cursor: pointer;
+}
+
+.slide-image:hover + .carousel-controls label{
+    opacity: 0.5;
+}
+
+.carousel-controls label:hover {
+    opacity: 1;
+}
+
+.carousel-controls .prev-slide {
+    width: 49%;
+    text-align: left;
+    left: 0;
+}
+
+.carousel-controls .next-slide {
+    width: 49%;
+    text-align: right;
+    right: 0;
+}
+
+.carousel-dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    z-index: 999;
+    text-align: center;
+}
+
+.carousel-dots .carousel-dot {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.5;
+    margin: 10px;
+}
+
+input:checked + .slide-container .slide-image {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .carousel-controls label {
+     display: block; 
+}
+
+input#img-1:checked ~ .carousel-dots label#img-dot-1,
+input#img-2:checked ~ .carousel-dots label#img-dot-2,
+input#img-3:checked ~ .carousel-dots label#img-dot-3,
+input#img-4:checked ~ .carousel-dots label#img-dot-4,
+input#img-5:checked ~ .carousel-dots label#img-dot-5,
+input#img-6:checked ~ .carousel-dots label#img-dot-6 {
+	opacity: 1;
+}
+
+
+input:checked + .slide-container .nav label { display: block; }
